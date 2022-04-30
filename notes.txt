@@ -1,6 +1,7 @@
 Rails tips:
 
  # in dev:
+set RAILS_ENV=development
 rake assets:clean && rake assets:precompile
 
  # to deploy:

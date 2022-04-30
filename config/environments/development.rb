@@ -11,7 +11,7 @@ Multiverse::Application.configure do
 
   # AC: I can't see why I wouldn't want to test my caching locally
   config.action_controller.perform_caching = true
-  
+
   # Don't preload everything
   config.eager_load = false
 
@@ -23,35 +23,35 @@ Multiverse::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
-  
+
   config.log_level = :info
   ##### Try to avoid crashing
   #config.log_level = :warn
-  
+
   # Throw errors early in dev if params are filtered out by Rails 4
   config.action_controller.action_on_unpermitted_parameters = :raise
 
 
   if Rails::VERSION::STRING >= '3.1'
-  
+
     config.assets.enabled = true
     config.assets.version = '1.0'
     config.assets.compile = true
-    
+
     # Do not compress assets
     config.assets.compress = false
-      
+
     # Print deprecation notices to the Rails logger
     config.active_support.deprecation = :log
 
     # Expands the lines which load the assets
     config.assets.debug = true  # doubles up execution if application.js is compiled :/
-    
+
     # Dodge precompiled assets
     config.assets.prefix = "/dev-assets"
     # was commented out; trying re-enabling on 2016-02-25
-    
-    config.serve_static_assets = true
+
+    config.serve_static_files = true
 
     # Raise exception on mass assignment protection for Active Record models
     config.active_record.mass_assignment_sanitizer = :strict
@@ -61,7 +61,7 @@ Multiverse::Application.configure do
     #config.active_record.auto_explain_threshold_in_seconds = 0.5
     ActiveRecord::Base.logger = Logger.new(STDOUT)
   end
-  
+
   config.after_initialize do
     Bullet.enable = true
     Bullet.alert = false
