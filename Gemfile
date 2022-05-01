@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Cedar, Ruby 2, Rails 4
 # Or not Ruby 2: "Ruby 2.0.0, specially the 64bits version, are relatively new on the Windows area and not all the packages have been updated to be compatible with it. To use this version you will require some knowledge about compilers and solving dependency issues, which might be too complicated if you just want to play with the language."
-ruby #'2.5.5' # '1.9.3'
+ruby '2.5.5' # '1.9.3'
 # gem 'activesupport', '~> 4.0.4' # higher needs ruby 1.9.3
 gem 'rails' #, '~>4.1.0' # '>=4.0.0'
 gem 'webrick' #, '1.3.1'

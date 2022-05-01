@@ -10,6 +10,7 @@ rake assets:clean && rake assets:precompile
 rake cloudinary:sync_static
 git add .
 git commit -am ""
+heroku git:remote -a ccgverse
 git push heroku master
 heroku restart
 
