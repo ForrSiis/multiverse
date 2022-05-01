@@ -238,7 +238,6 @@ DEPENDENCIES
   rdiscount
   rest-client
   sass-rails
-  sqlite3 (>= 1.2.5)
   sqlite3-ruby
   thin
   tzinfo-data
